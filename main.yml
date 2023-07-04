@@ -1,0 +1,10 @@
+- hosts: all
+  handlers:
+    - import_tasks: handlers/main.yml
+  tasks:
+    - name: Include default vars
+      include_vars: main.yml
+
+    - name: Include task list in play
+      ansible.builtin.include_tasks:
+        file: tasks/main.yml
