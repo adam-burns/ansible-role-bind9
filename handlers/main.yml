@@ -1,12 +1,12 @@
 ---
 - name: Restart bind9
   ansible.builtin.service:
-    name: bind9
+    name: named
     state: restarted
 
 - name: Reload bind9
   ansible.builtin.service:
-    name: bind9
+    name: named
     state: reloaded
 
 - name: Restart monit
